@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
+Voir https://eclipse-ee4j.github.io/jaxb-ri 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2025.11.14 à 07:58:08 PM CET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://isi.com/banque">
+    <schemaBindings map="false">
+      <package name="com.isi.soap_banque.generated"/>
+    </schemaBindings>
+    <bindings scd="tns:getAccountRequest">
+      <class ref="com.isi.soap_banque.generated.GetAccountRequest"/>
+    </bindings>
+    <bindings scd="tns:getAccountResponse">
+      <class ref="com.isi.soap_banque.generated.GetAccountResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+
