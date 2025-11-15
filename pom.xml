@@ -116,7 +116,7 @@
 			</plugin>
 
 			<!-- Plugin JAXB2 pour générer les classes Java depuis XSD (Contract-First) -->
-			<plugin>
+			<!--plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
 				<version>3.1.0</version>
@@ -129,16 +129,51 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!-- Dossier contenant vos fichiers XSD -->
 					<sources>
 						<source>${project.basedir}/src/main/resources/xsd</source>
 					</sources>
-					<!-- Dossier de sortie pour les classes générées -->
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-					<!-- Package pour les classes générées -->
 					<packageName>com.isi.soap_banque.generated</packageName>
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>
+			</plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<!-- Génération pour banque.xsd -->
+					<execution>
+						<id>xjc-banque</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.basedir}/src/main/resources/xsd/banque.xsd</source>
+							</sources>
+							<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+							<packageName>com.isi.soap_banque.generated.banque</packageName>
+							<clearOutputDir>false</clearOutputDir>
+						</configuration>
+					</execution>
+
+					<!-- Génération pour transaction.xsd -->
+					<execution>
+						<id>xjc-transaction</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.basedir}/src/main/resources/xsd/transaction.xsd</source>
+							</sources>
+							<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+							<packageName>com.isi.soap_banque.transaction</packageName>
+							<clearOutputDir>false</clearOutputDir>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 			<!-- Spring Boot Maven Plugin -->

@@ -37,4 +37,20 @@ public class WebServiceConfig {
     public XsdSchema banqueSchema() {
         return new SimpleXsdSchema(new ClassPathResource("xsd/banque.xsd"));
     }
+
+    // ============= TRANSACTION (client, solde, transfer, payment) =============
+    @Bean(name = "transaction")
+    public DefaultWsdl11Definition transactionWsdl(XsdSchema transactionSchema) {
+        DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
+        wsdl.setPortTypeName("TransactionPort");
+        wsdl.setLocationUri("/ws");
+        wsdl.setTargetNamespace("http://www.esmt.com/banque");
+        wsdl.setSchema(transactionSchema);
+        return wsdl;
+    }
+
+    @Bean
+    public XsdSchema transactionSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("xsd/transaction.xsd"));
+    }
 }

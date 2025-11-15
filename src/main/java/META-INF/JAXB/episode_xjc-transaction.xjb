@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
+Voir https://eclipse-ee4j.github.io/jaxb-ri 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2025.11.14 à 11:45:43 PM CET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.esmt.com/banque">
+    <schemaBindings map="false">
+      <package name="com.isi.soap_banque.transaction"/>
+    </schemaBindings>
+    <bindings scd="tns:addClientRequest">
+      <class ref="com.isi.soap_banque.transaction.AddClientRequest"/>
+    </bindings>
+    <bindings scd="~tns:clientInfo">
+      <class ref="com.isi.soap_banque.transaction.ClientInfo"/>
+    </bindings>
+    <bindings scd="tns:ClientResponse">
+      <class ref="com.isi.soap_banque.transaction.ClientResponse"/>
+    </bindings>
+    <bindings scd="~tns:serviceStatus">
+      <class ref="com.isi.soap_banque.transaction.ServiceStatus"/>
+    </bindings>
+    <bindings scd="tns:getSoldeRequest">
+      <class ref="com.isi.soap_banque.transaction.GetSoldeRequest"/>
+    </bindings>
+    <bindings scd="tns:SoldeResponse">
+      <class ref="com.isi.soap_banque.transaction.SoldeResponse"/>
+    </bindings>
+    <bindings scd="tns:addTransferRequest">
+      <class ref="com.isi.soap_banque.transaction.AddTransferRequest"/>
+    </bindings>
+    <bindings scd="~tns:transferInfo">
+      <class ref="com.isi.soap_banque.transaction.TransferInfo"/>
+    </bindings>
+    <bindings scd="tns:TransferResponse">
+      <class ref="com.isi.soap_banque.transaction.TransferResponse"/>
+    </bindings>
+    <bindings scd="tns:addPaymentRequest">
+      <class ref="com.isi.soap_banque.transaction.AddPaymentRequest"/>
+    </bindings>
+    <bindings scd="~tns:paymentInfo">
+      <class ref="com.isi.soap_banque.transaction.PaymentInfo"/>
+    </bindings>
+    <bindings scd="tns:PaymentResponse">
+      <class ref="com.isi.soap_banque.transaction.PaymentResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+
