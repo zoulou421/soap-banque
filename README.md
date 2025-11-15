@@ -116,7 +116,7 @@ soap-banque/
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/yourusername/soap-banque.git
+   git clone https://github.com/zoulou421/soap-banque.git
    cd soap-banque
 ```
 
